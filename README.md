@@ -25,6 +25,10 @@ Full Stack Resources is a platform designed to help developers share links with 
 - Manage your own resource submissions
 - Clean, accessible interface focused on usability
 
+## Project Management
+
+Track project progress, user stories and development tasks on the [Project Board](https://github.com/users/niraj-sachania/projects/11/views/1).
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
