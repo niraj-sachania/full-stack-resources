@@ -36,6 +36,10 @@ The application uses a simple relational database with two main entities:
 - **User**: Handles authentication and user management
 - **Resource**: Stores submitted resources with links and descriptions
 
+## Wireframes
+
+![Wireframes](docs/Wireframes.jpg)
+
 ## Project Management
 
 Track project progress, user stories and development tasks on the [Project Board](https://github.com/users/niraj-sachania/projects/11/views/1).
