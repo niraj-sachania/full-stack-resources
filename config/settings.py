@@ -83,7 +83,7 @@ DATABASES = {
     'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
 }
 
-SCRF_TRUSTED_ORIGINS = [
+CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net",
     "https://*.herokuapp.com"
 ]
