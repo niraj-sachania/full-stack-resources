@@ -27,6 +27,15 @@ Full Stack Resources is a platform designed to help developers share links with 
 - Manage your own resource submissions
 - Clean, accessible interface focused on usability
 
+## Entity Relationship Diagram
+
+![Database Schema](docs/ERD.png)
+
+The application uses a simple relational database with two main entities:
+
+- **User**: Handles authentication and user management
+- **Resource**: Stores submitted resources with links and descriptions
+
 ## Project Management
 
 Track project progress, user stories and development tasks on the [Project Board](https://github.com/users/niraj-sachania/projects/11/views/1).
