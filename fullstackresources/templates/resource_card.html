@@ -1,0 +1,14 @@
+<div class="col-md-6 col-lg-4">
+  <div class="card h-100 shadow-sm">
+    <div class="card-body">
+      <h3 class="card-title display-5">{{ resource.title }}</h3>
+      <p class="card-text text-muted">{{ resource.description | safe }}</p>
+    </div>
+    <div class="card-footer bg-white border-top-0">
+      <a href="{{ resource.link }}"
+         class="text-decoration-none"
+         target="_blank"
+         rel="noopener noreferrer">View resource →</a>
+    </div>
+  </div>
+</div>
