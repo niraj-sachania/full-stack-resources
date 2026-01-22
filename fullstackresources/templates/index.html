@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <h1 class="display-5 fw-bold">
+          Discover and share trusted full-stack resources
+        </h1>
+        <p class="lead text-muted">
+          A lightweight, community-driven hub for curated development links.
+          Submit your favorites, explore what others recommend and manage your
+          own contributions.
+        </p>
+        <div class="d-flex gap-2">
+          <a href="submit.html" class="btn btn-primary btn-lg"
+            >Submit a resource</a
+          >
+          <a href="#resources" class="btn btn-outline-secondary btn-lg"
+            >Browse resources</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Community snapshot</h5>
+            <div class="row text-center">
+              <div class="col">
+                <div class="h2 mb-0">#</div>
+                <small class="text-muted">Resources</small>
+              </div>
+              <div class="col">
+                <div class="h2 mb-0">#</div>
+                <small class="text-muted">Contributors</small>
+              </div>
+            </div>
+            <hr />
+            <p class="mb-0 text-muted">
+              Simple, accessible and built for developer focus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="pb-5">
+  <div class="container" id="resources">
+    <div
+      class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center mb-4"
+    >
+      <div>
+        <h2 class="h4 fw-semibold">Latest resources</h2>
+        <p class="text-muted mb-0">
+          Browse a paginated list of community submissions.
+        </p>
+      </div>
+    </div>
+
+    #paginatedresourcelist
+  </div>
+</main>
+{% endblock %}
