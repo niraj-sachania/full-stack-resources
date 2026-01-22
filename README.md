@@ -2,6 +2,8 @@
 
 A lightweight, community-driven web platform where developers can share, discover and curate full-stack development resources.
 
+🔗 **[View Live Site](https://full-stack-resources-ed27a57226de.herokuapp.com/)**
+
 ## Overview
 
 Full Stack Resources is a platform designed to help developers share links with descriptions, browse a paginated list of resources, and manage their own submissions. The platform focuses on simplicity, moderation, and accessibility to quickly provide value to the developer community.
