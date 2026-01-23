@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_POST
 from .models import Resource
 from .forms import ResourceForm
 
@@ -40,3 +42,51 @@ class ResourceList(generic.ListView):
         context = self.get_context_data()
         context["resource_form"] = resource_form
         return self.render_to_response(context)
+
+
+@login_required
+def resource_edit(request, slug):
+    resource = get_object_or_404(Resource, slug=slug)
+
+    if resource.username != request.user:
+        messages.add_message(
+            request, messages.ERROR,
+            "You can only edit your own resources."
+        )
+        return HttpResponseRedirect(reverse("home"))
+
+    if request.method == "POST":
+        resource_form = ResourceForm(data=request.POST, instance=resource)
+        if resource_form.is_valid():
+            resource = resource_form.save(commit=False)
+            resource.username = request.user
+            resource.save()
+            messages.add_message(
+                request, messages.SUCCESS, "Resource updated!"
+            )
+            return HttpResponseRedirect(reverse("home"))
+    else:
+        resource_form = ResourceForm(instance=resource)
+
+    return render(
+        request,
+        "resource_edit.html",
+        {"resource_form": resource_form, "resource": resource},
+    )
+
+
+@login_required
+@require_POST
+def resource_delete(request, slug):
+    resource = get_object_or_404(Resource, slug=slug)
+
+    if resource.username != request.user:
+        messages.add_message(
+            request, messages.ERROR,
+            "You can only delete your own resources."
+        )
+        return HttpResponseRedirect(reverse("home"))
+
+    resource.delete()
+    messages.add_message(request, messages.SUCCESS, "Resource deleted!")
+    return HttpResponseRedirect(reverse("home"))
