@@ -71,13 +71,26 @@ The application uses a simple relational database with two main entities:
 
 ### MVP screenshots
 
-Logged-in view:
+Desktop logged-in view:
 
 ![MVP Logged In](docs/mvp_logged_in.png)
 
-Logged-out view:
+Desktop logged-out view:
 
 ![MVP Logged Out](docs/mvp_logged_out.png)
+
+<details>
+<summary>Mobile views</summary>
+
+Mobile logged-in view:
+
+![MVP Mobile Logged In](docs/mvp_mobile_loggedin.png)
+
+Mobile logged-out view:
+
+![MVP Mobile Logged Out](docs/mvp_mobile_loggedout.png)
+
+</details>
 
 ## Differences between concept and deliverable
 
