@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Resource(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    link = models.CharField(max_length=2000, unique=True)
+    link = models.URLField(max_length=2000, unique=True)
     username = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="resources")
     description = models.TextField()
