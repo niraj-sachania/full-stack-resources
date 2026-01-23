@@ -17,6 +17,10 @@ class ResourceList(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        approved_resources = Resource.objects.filter(approved=1)
+        context["resource_count"] = approved_resources.count()
+        context["contributor_count"] = approved_resources.values(
+            "username").distinct().count()
         context["resource_form"] = ResourceForm()
         return context
 
