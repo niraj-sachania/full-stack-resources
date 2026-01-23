@@ -82,6 +82,7 @@ WCAG test: 10/10 AIM score.
 ![CSS validation](docs/test_css.png)
 
 ## Performance (PageSpeed Insights)
+
 Desktop:
 ![PageSpeed desktop](docs/test_desktop.png)
 
@@ -117,15 +118,15 @@ Track project progress, user stories and development tasks on the [Project Board
 
 1. Clone the repository.
 2. Create and activate a virtual environment:
-	- `python3 -m venv venv`
-	- `source venv/bin/activate`
+   - `python3 -m venv venv`
+   - `source venv/bin/activate`
 3. Install dependencies:
-	- `pip install -r requirements.txt`
+   - `pip install -r requirements.txt`
 4. Create `env.py` with required environment variables (e.g., `SECRET_KEY`, `DATABASE_URL`).
 5. Run migrations:
-	- `python manage.py migrate`
+   - `python manage.py migrate`
 6. Start the dev server:
-	- `python manage.py runserver`
+   - `python manage.py runserver`
 7. Visit `http://127.0.0.1:8000/`.
 
 ### Deploy to Heroku
@@ -143,6 +144,14 @@ Track project progress, user stories and development tasks on the [Project Board
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## AI tools usage
+
+Two development days were chosen to complete the MVP. With the focus on Django CRUD aspects, GPT-5.2-Codex and Claude Sonnet 4.5 were used via Copilot for crafting user stories and to assist with HTML/CSS coding for productivity, then customised to align with the wireframes. An incremental, iterative approach enabled testing, refining, and integrating code effectively, while maintaining full control over the project. AI was also used to help convert README content into Markdown.
+
+Copilot proved effective for refreshing Django concepts (e.g. templating syntax) and assisting with configuration tasks such as WhiteNoise for static files on Heroku. It also helped identify and configure development tooling like djLint for formatting mixed HTML/Python templates.
+
+Overall, AI served as an intelligent co-pilot and accelerator — automating repetitive tasks and streamlining workflows — so focus could remain on higher-level architectural, creative and UX decisions.
 
 ## License
 
