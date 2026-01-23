@@ -119,10 +119,7 @@ Mobile logged-out view:
 
 ## Manual Testing Demo
 
-<video width="100%" controls>
-    <source src="https://res.cloudinary.com/dhxzk8aco/video/upload/v1769178536/Capstonedemo_xytgob.mp4" type="video/mp4">
-    Your browser does not support the video tag. <a href="https://res.cloudinary.com/dhxzk8aco/video/upload/v1769178536/Capstonedemo_xytgob.mp4">Watch the demo</a>.
-</video>
+[![Manual testing demo thumbnail](docs/manual_testing_thumbnail.png)](https://res.cloudinary.com/dhxzk8aco/video/upload/v1769178536/Capstonedemo_xytgob.mp4)
 
 ## Automated unit tests
 
@@ -181,6 +178,12 @@ Password reset remains failing in production because the mail server is not conf
 Track project progress, user stories and development tasks on the [Project Board](https://github.com/users/niraj-sachania/projects/11/views/1).
 
 ![Project board](docs/project_board.png)
+
+## Django admin panel
+
+Shared resources are approved via admin panel
+
+![Django admin panel](docs/django_admin_panel.png)
 
 ## Deployment process
 
