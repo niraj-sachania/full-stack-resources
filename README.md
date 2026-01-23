@@ -76,15 +76,14 @@ The application uses a simple relational database with two main entities:
 
 ## MVP screenshots
 
-![MVP Screenshot 1](docs/mvp-1.png)
-![MVP Screenshot 2](docs/mvp-2.png)
-![MVP Screenshot 3](docs/mvp-3.png)
+![MVP Logged In](docs/mvp_logged_in.png)
+![MVP Logged Out](docs/mvp_logged_out.png)
 
 ## Accessibility
 
 WCAG test: 10/10 AIM score.
 
-![WCAG accessibility test](docs/Test%20-%20WCAG%20accessibility.png)
+![WCAG accessibility test](docs/test_accessibility.png)
 
 ## Project Management
 
