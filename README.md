@@ -33,6 +33,19 @@ The goal of this open source project is for developers to share resources and co
 - Manage your own resource submissions
 - Clean, accessible interface focused on usability
 
+## User journeys
+
+- Visitor lands on the homepage and browses the latest approved resources
+- Visitor paginates through the list to explore more resources
+- Visitor opens a resource link and is taken to the external site
+- Visitor registers for an account
+- Registered user logs in and sees logged‑in status
+- Logged‑in user submits a new resource
+- Logged‑in user edits their own resource
+- Logged‑in user deletes their own resource (with confirmation)
+- Logged‑in user logs out
+- Admin logs into Django admin to approve, edit, delete resources, and manage users
+
 ## Tech Stack
 
 - **Backend**: Django 4.2
@@ -89,6 +102,7 @@ Logged-out view:
 - ✅ Home link hidden on homepage
 - ✅ Pagination shows relevant buttons based on context (items count/availability)
 - ✅ Deletion confirmation prompt
+- ✅ PEP8 linting (flake8) passed for project code (excluding venv, migrations, cache)
 
 ## Automated unit tests
 
@@ -190,6 +204,10 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Two development days were chosen to complete the MVP. With the focus on Django CRUD aspects, GPT-5.2-Codex and Claude Sonnet 4.5 were used via Copilot for crafting user stories and to assist with HTML/CSS coding for productivity, then customised to align with the wireframes. An incremental, iterative approach enabled testing, refining, and integrating code effectively, while maintaining full control over the project. AI was also used to help convert README content into Markdown.
 
 Copilot proved effective for refreshing Django concepts (e.g. templating syntax) and assisting with configuration tasks such as WhiteNoise for static files on Heroku. It also helped identify and configure development tooling like djLint for formatting mixed HTML/Python templates.
+
+GPT was used to generate the logged-in status indicator. The initial placement inside the navbar made it invisible on mobile unless the user opened the burger menu, which was caught during manual testing. This was corrected through further prompting by adding a mobile-visible instance in the header outside the nav.
+
+GPT was used to run PEP8 linting with flake8. The initial scan surfaced an unused import and several line-length violations in settings and env configuration. These were corrected with GPT by suppressing the optional `env` import, wrapping long validator paths, and reformatting environment variable values. A follow-up scan confirmed a clean pass.
 
 Copilot was also used to generate automated tests. While the initial test set covered CRUD processes, only about 50% of acceptance criteria were covered and the tests focused on backend DB interactions. Missing front‑end testing (pagination, registration flow, auto‑login redirect, invalid URL rejection, etc.) was then added through further prompting and refinement. So for effective testing, it's useful to provide the context of relevant acceptance criteria and validation to tie in with the purpose and any crucial business logic.
 
