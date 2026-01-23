@@ -1,0 +1,29 @@
+<div class="container" id="resources">
+    <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center mb-4">
+        <div>
+            <h2 class="h4 fw-semibold">Latest resources</h2>
+            <p class="text-muted mb-0">Browse a paginated list of community submissions.</p>
+        </div>
+    </div>
+    <div class="row g-4">
+        {% for resource in resource_list %}
+            {% include "resource_card.html" with resource=resource %}
+        {% endfor %}
+    </div>
+    {% if is_paginated %}
+        <nav class="mt-4" aria-label="Pagination">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a href="?page={{ page_obj.previous_page_number }}" class="page-link">« Previous</a>
+                    </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next »</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+</div>
