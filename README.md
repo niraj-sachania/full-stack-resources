@@ -1,4 +1,4 @@
-# Full Stack Resources
+![Full Stack Resources logo](static/images/logo.svg)
 
 A lightweight, community-driven web platform where developers can share, discover and curate full-stack development resources.
 
