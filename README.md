@@ -117,6 +117,13 @@ Mobile logged-out view:
 - ✅ Deletion confirmation prompt
 - ✅ PEP8 linting (flake8) passed for project code (excluding venv, migrations, cache)
 
+## Manual Testing Demo
+
+<video width="100%" controls>
+    <source src="https://res.cloudinary.com/dhxzk8aco/video/upload/v1769178536/Capstonedemo_xytgob.mp4" type="video/mp4">
+    Your browser does not support the video tag. <a href="https://res.cloudinary.com/dhxzk8aco/video/upload/v1769178536/Capstonedemo_xytgob.mp4">Watch the demo</a>.
+</video>
+
 ## Automated unit tests
 
 **Tech used:** Django TestCase, Django test client.
