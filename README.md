@@ -78,6 +78,25 @@ The application uses a simple relational database with two main entities:
 - ✅ Headings uses correct heading hierarchy
 - ✅ Home link hidden on homepage
 - ✅ Pagination shows relevant buttons based on context (items count/availability)
+- ✅ Deletion confirmation prompt
+
+## Automated unit tests
+
+**Tech used:** Django TestCase, Django test client.
+
+**How to run:**
+
+- `python manage.py test`
+
+**Outcome:**
+
+- ✅ 8 tests passing (latest local run)
+
+**Monitoring & actions:**
+
+- Run tests before each commit and after changes to models, forms or views.
+- Run again after dependency upgrades or config changes.
+- If tests fail: review the failing test output, fix the underlying issue, rerun and update documentation if behavior changes.
 
 ## Accessibility
 
@@ -161,6 +180,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Two development days were chosen to complete the MVP. With the focus on Django CRUD aspects, GPT-5.2-Codex and Claude Sonnet 4.5 were used via Copilot for crafting user stories and to assist with HTML/CSS coding for productivity, then customised to align with the wireframes. An incremental, iterative approach enabled testing, refining, and integrating code effectively, while maintaining full control over the project. AI was also used to help convert README content into Markdown.
 
 Copilot proved effective for refreshing Django concepts (e.g. templating syntax) and assisting with configuration tasks such as WhiteNoise for static files on Heroku. It also helped identify and configure development tooling like djLint for formatting mixed HTML/Python templates.
+
+Copilot was also used to generate automated tests. While the initial test set covered CRUD processes, only about 50% of acceptance criteria were covered and the tests focused on backend DB interactions. Missing front‑end testing (pagination, registration flow, auto‑login redirect, invalid URL rejection, etc.) was then added through further prompting and refinement. So for effective testing, it's useful to provide the context of relevant acceptance criteria and validation to tie in with the purpose and any crucial business logic.
 
 Overall, AI served as an intelligent co-pilot and accelerator — automating repetitive tasks and streamlining workflows — so focus could remain on higher-level architectural, creative and UX decisions.
 
