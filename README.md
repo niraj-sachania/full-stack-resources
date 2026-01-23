@@ -14,6 +14,10 @@ Full Stack Resources is a platform designed to help developers share links with 
 - **Knowledge Sharing**: Facilitate knowledge sharing in the developer community without overwhelming developers with unnecessary features
 - **Foundation for Growth**: Establish a foundation for future enhancements such as voting, commenting, and categorization
 
+## Scope
+
+The goal of this open source project is for developers to share resources and contribute to the project itself by extending the portal’s features. The MVP focuses on demonstrating CRUD functionality in a Django project.
+
 ## Target Audience
 
 - **Full-stack software developers** seeking curated resources for learning or building projects
@@ -40,6 +44,9 @@ Full Stack Resources is a platform designed to help developers share links with 
 - ✅ Responsive view (mobile, tablet, desktop)
 - ✅ Notification messages for login, form submission success, and validation errors
 - ✅ Only approved resources are shown on the frontend
+- ✅ Navbar hamburger button has accessible labeling
+- ✅ Headings uses correct heading hierarchy
+- ✅ Home link hidden on homepage
 
 ## Fixes applied
 
@@ -49,6 +56,8 @@ As per fix commits, the following improvements were applied:
 - Template and layout adjustments for authentication pages.
 - Resource CRUD permissions enforced (contributors can edit/delete only their own submissions).
 - Case-insensitive resource title validation to prevent duplicate submissions.
+- Accessibility improvements (navbar toggler labeling, heading hierarchy).
+- Navigation polish (hide Home link on homepage).
 
 Password reset remains failing in production because the mail server is not configured yet. This is outside the current MVP scope and will be addressed when email credentials are available.
 
@@ -64,6 +73,18 @@ The application uses a simple relational database with two main entities:
 ## Wireframes
 
 ![Wireframes](docs/Wireframes.jpg)
+
+## MVP screenshots
+
+![MVP Screenshot 1](docs/mvp-1.png)
+![MVP Screenshot 2](docs/mvp-2.png)
+![MVP Screenshot 3](docs/mvp-3.png)
+
+## Accessibility
+
+WCAG test: 10/10 AIM score.
+
+![WCAG accessibility test](docs/Test%20-%20WCAG%20accessibility.png)
 
 ## Project Management
 
