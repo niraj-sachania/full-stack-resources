@@ -11,7 +11,7 @@ from .forms import ResourceForm
 
 
 class ResourceList(generic.ListView):
-    queryset = Resource.objects.filter(approved=1).order_by("?")
+    queryset = Resource.objects.filter(approved=1).order_by("-created_at")
     template_name = "index.html"
     paginate_by = 6
 
