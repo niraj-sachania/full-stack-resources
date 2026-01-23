@@ -27,6 +27,31 @@ Full Stack Resources is a platform designed to help developers share links with 
 - Manage your own resource submissions
 - Clean, accessible interface focused on usability
 
+## Testing checklist
+
+- ✅ Runserver without terminal or browser console errors
+- ✅ Resource creation form validation (prevents duplicates even with case changes; required fields enforced)
+- ✅ Create, edit, delete resources (edit/delete restricted to contributor only)
+- ✅ Create user account
+- ❌ Password reset at /accounts/password/reset/ returns 500 (needs fix)
+- ✅ Correct nav links, CTA and form visibility based on login status
+- ✅ Login and logout
+- ✅ Logged-in status indicator ("Logged in as")
+- ✅ Responsive view (mobile, tablet, desktop)
+- ✅ Notification messages for login, form submission success, and validation errors
+- ✅ Only approved resources are shown on the frontend
+
+## Fixes applied
+
+As per fix commits, the following improvements were applied:
+
+- Static files configured for production with WhiteNoise.
+- Template and layout adjustments for authentication pages.
+- Resource CRUD permissions enforced (contributors can edit/delete only their own submissions).
+- Case-insensitive resource title validation to prevent duplicate submissions.
+
+Password reset remains failing in production because the mail server is not configured yet. This is outside the current MVP scope and will be addressed when email credentials are available.
+
 ## Entity Relationship Diagram
 
 ![Database Schema](docs/ERD.png)
