@@ -39,6 +39,7 @@ class ResourceList(generic.ListView):
             )
             return HttpResponseRedirect(reverse("home"))
 
+        self.object_list = self.get_queryset()
         context = self.get_context_data()
         context["resource_form"] = resource_form
         return self.render_to_response(context)
