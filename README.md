@@ -33,6 +33,16 @@ The goal of this open source project is for developers to share resources and co
 - Manage your own resource submissions
 - Clean, accessible interface focused on usability
 
+## Tech Stack
+
+- **Backend**: Django 4.2
+- **Database**: PostgreSQL (via `dj-database-url`)
+- **Frontend**: Django Templates, Bootstrap 5
+- **Auth**: Django Allauth
+- **Forms**: Django Crispy Forms + crispy-bootstrap5
+- **Rich text**: Django Summernote
+- **Static files**: WhiteNoise
+
 ## Entity Relationship Diagram
 
 ![Database Schema](docs/ERD.png)
@@ -67,6 +77,7 @@ The application uses a simple relational database with two main entities:
 - ✅ Navbar hamburger button has accessible labeling
 - ✅ Headings uses correct heading hierarchy
 - ✅ Home link hidden on homepage
+- ✅ Pagination shows relevant buttons based on context (items count/availability)
 
 ## Accessibility
 
