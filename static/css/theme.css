@@ -135,3 +135,18 @@ body.bg-dark .nav-link:hover,
 body.bg-dark .nav-link:focus {
   color: #ffffff;
 }
+
+/* Make Sumernote WYSIWYG editor iframe responsive */
+.summernote-div,
+.summernote-div iframe,
+#id_description_iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 576px) {
+  .summernote-div iframe,
+  #id_description_iframe {
+    height: 320px !important;
+  }
+}
