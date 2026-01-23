@@ -66,6 +66,11 @@ Logged-out view:
 
 ![MVP Logged Out](docs/mvp_logged_out.png)
 
+## Differences between concept and deliverable
+
+- Cards now act as complete content snippets, removing the dedicated resource detail page. Users link directly to the external resource from the card for a simpler journey.
+- The Home link is conditional to avoid redundancy on the homepage, improving UX and addressing an accessibility scan flag.
+
 ## Testing checklist
 
 - ✅ Runserver without terminal or browser console errors
