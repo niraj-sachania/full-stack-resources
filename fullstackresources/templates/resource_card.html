@@ -13,7 +13,9 @@
         {% if user.is_authenticated and resource.username == user %}
           <a href="{% url 'resource_edit' resource.slug %}"
              class="btn btn-sm btn-outline-secondary">Edit</a>
-          <form method="post" action="{% url 'resource_delete' resource.slug %}">
+              <form method="post"
+                action="{% url 'resource_delete' resource.slug %}"
+                onsubmit="return confirm('Delete this resource? This cannot be undone.');">
             {% csrf_token %}
             <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
           </form>
