@@ -58,7 +58,12 @@ The application uses a simple relational database with two main entities:
 
 ### MVP screenshots
 
+Logged-in view:
+
 ![MVP Logged In](docs/mvp_logged_in.png)
+
+Logged-out view:
+
 ![MVP Logged Out](docs/mvp_logged_out.png)
 
 ## Testing checklist
@@ -184,6 +189,10 @@ Copilot proved effective for refreshing Django concepts (e.g. templating syntax)
 Copilot was also used to generate automated tests. While the initial test set covered CRUD processes, only about 50% of acceptance criteria were covered and the tests focused on backend DB interactions. Missing front‑end testing (pagination, registration flow, auto‑login redirect, invalid URL rejection, etc.) was then added through further prompting and refinement. So for effective testing, it's useful to provide the context of relevant acceptance criteria and validation to tie in with the purpose and any crucial business logic.
 
 Overall, AI served as an intelligent co-pilot and accelerator — automating repetitive tasks and streamlining workflows — so focus could remain on higher-level architectural, creative and UX decisions.
+
+## Credits
+
+Aside from the AI assistance mentioned above, learnings from Code Institute’s AI‑augmented bootcamp were applied here, particularly the Django section. The concept and code for dismissible messages was borrowed from Code Institute, though the messages framework is an integral part of Django.
 
 ## License
 
