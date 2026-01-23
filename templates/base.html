@@ -12,7 +12,7 @@
           type="image/svg+xml"
           href="{% static 'images/favicon.svg' %}" />
   </head>
-  <body class="bg-light">
+  <body class="bg-light d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg bg-white border-bottom">
       <div class="container">
         <a class="navbar-brand fw-semibold" href="{% url 'home' %}">
@@ -74,9 +74,11 @@
         </div>
       </div>
     </div>
-    {% block content %}
-      <!-- Content block -->
-    {% endblock content %}
+    <main class="flex-grow-1">
+      {% block content %}
+        <!-- Content block -->
+      {% endblock content %}
+    </main>
     <footer class="border-top bg-white py-4">
       <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
         <small class="text-muted">© 2026 Full Stack Resources</small>
